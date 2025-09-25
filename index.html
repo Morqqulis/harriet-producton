@@ -5,11 +5,12 @@
 	<title>Harriet Hacks</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: blob:; font-src 'self' data: blob: https:; style-src 'self' 'unsafe-inline' data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob:; img-src 'self' data: blob: https:; connect-src 'self' ws: wss:">
+	<!-- <meta http-equiv="Content-Security-Policy"
+         content="default-src 'self' data: blob:; font-src 'self' data: blob: https:; style-src 'self' 'unsafe-inline' data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob:; img-src 'self' data: blob: https:; connect-src 'self' ws: wss:"> -->
 
 	<link rel="shortcut icon" href="favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/style.min.css?_v=20250922071645">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250925070324">
 </head>
 
 <body>
@@ -35,26 +36,26 @@
 
 			<div class="header__main">
 				<div class="header__container">
-					<a class="header__logo" href="#">
+					<a class="header__logo" href="/">
 						<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="Harriet Hacks Logo" width="288" height="95"></picture>
 					</a>
 
 					<nav class="header__nav" data-da=".header__mobile, 1023.98">
 						<ul class="header__nav-list">
 							<li class="header__nav-item">
-								<a href="#about" class="header__nav-link">About</a>
+								<a href="/about.html" class="header__nav-link">About</a>
 							</li>
 							<li class="header__nav-item">
 								<a href="#podcast" class="header__nav-link">Podcast</a>
 							</li>
 							<li class="header__nav-item">
-								<a href="#media" class="header__nav-link">Media</a>
+								<a href="/media.html" class="header__nav-link">Media</a>
 							</li>
 							<li class="header__nav-item">
 								<a href="#course" class="header__nav-link">Course</a>
 							</li>
 							<li class="header__nav-item">
-								<a href="#book" class="header__nav-link">Book</a>
+								<a href="/books.html" class="header__nav-link">Book</a>
 							</li>
 						</ul>
 					</nav>
@@ -271,17 +272,19 @@
 					<div class="course__card">
 
 						<h3 class="course__title">AI Security Fundamentals Course</h3>
-						<p class="course__description">
-							The go-to entry point for anyone who wants to break into AI security.
-							Choose the level that fits your experience — from beginner to advanced
-							— and build your skills through a mix of self-paced content and live
-							instructor-led seminars.
-						</p>
-						<p class="course__description">
-							In just 8 weeks, you'll become proficient in core security concepts
-							and hands-on technical code, with the tools and confidence to step
-							into roles in AI security.
-						</p>
+						<div class="course__description">
+							<p>
+								The go-to entry point for anyone who wants to break into AI security.
+								Choose the level that fits your experience — from beginner to advanced
+								— and build your skills through a mix of self-paced content and live
+								instructor-led seminars.
+							</p>
+							<p>
+								In just 8 weeks, you'll become proficient in core security concepts
+								and hands-on technical code, with the tools and confidence to step
+								into roles in AI security.
+							</p>
+						</div>
 
 						<a href="#" class="btn--outline course__btn btn">
 							Find Out More
@@ -564,7 +567,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20250922071645"></script>
+	<script src="js/app.min.js?_v=20250925070324"></script>
 </body>
 
 </html>
