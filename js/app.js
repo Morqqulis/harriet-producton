@@ -905,6 +905,48 @@
                 recalculateAllMacy();
             }, 250);
         });
+        function handleTimer(endDate) {
+            const timerDays = document.querySelectorAll(".timer__days");
+            const timerHours = document.querySelectorAll(".timer__hours");
+            const timerMinutes = document.querySelectorAll(".timer__minutes");
+            const timerSeconds = document.querySelectorAll(".timer__seconds");
+            const timerItems = [ timerDays, timerHours, timerMinutes, timerSeconds ];
+            if (!timerDays || !timerHours || !timerMinutes || !timerSeconds) return;
+            const targetDate = new Date(endDate).getTime();
+            function updateTimer() {
+                const now = (new Date).getTime();
+                const timeLeft = targetDate - now;
+                if (timeLeft <= 0) {
+                    timerItems.forEach(item => {
+                        item.forEach(item => {
+                            item.textContent = "0";
+                        });
+                    });
+                    return;
+                }
+                const days = Math.floor(timeLeft / (1e3 * 60 * 60 * 24));
+                const hours = Math.floor(timeLeft % (1e3 * 60 * 60 * 24) / (1e3 * 60 * 60));
+                const minutes = Math.floor(timeLeft % (1e3 * 60 * 60) / (1e3 * 60));
+                const seconds = Math.floor(timeLeft % (1e3 * 60) / 1e3);
+                timerItems.forEach(item => {
+                    item.forEach(item => {
+                        item.textContent = days.toString();
+                    });
+                });
+                timerHours.forEach(hour => {
+                    hour.textContent = hours.toString();
+                });
+                timerMinutes.forEach(minute => {
+                    minute.textContent = minutes.toString();
+                });
+                timerSeconds.forEach(second => {
+                    second.textContent = seconds.toString();
+                });
+                timerDays.forEach(day => {});
+            }
+            updateTimer();
+            setInterval(updateTimer, 1e3);
+        }
         document.addEventListener("DOMContentLoaded", () => {
             const images = document.querySelectorAll(".tabs__articles img");
             images.forEach(img => {
@@ -913,6 +955,7 @@
                     recalculateAllMacy();
                 });
             });
+            handleTimer("2025-10-01");
         });
         window["FLS"] = true;
         isWebp();
