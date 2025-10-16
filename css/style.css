@@ -1351,22 +1351,12 @@
   margin-inline: auto;
 }
 
-.no-webp .soon {
-  background-image: url("../img/soon/soon-bg.jpg"); }
-
 .soon {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-color: #e8a9e0;
 }
 
 .no-webp .soon_about {
   background-image: url("../img/soon/soon-bg-about.jpg"); }
-
-.soon__container {
-  margin-bottom: 8.375rem;
-  width: 100%;
-}
 
 .soon__content {
   display: -webkit-box;
@@ -1398,7 +1388,13 @@
   width: 100%;
 }
 
+.soon__image img {
+  width: 100%;
+  height: auto;
+}
+
 .soon__text {
+  margin-left: -3.75rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1410,18 +1406,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-@supports (margin-left: clamp( 0.0000000625rem , -6.2497286332rem  +  13.0206071943vw , 9.375rem )) {
-  .soon__text {
-    margin-left: clamp( 0.0000000625rem , -6.2497286332rem  +  13.0206071943vw , 9.375rem );
-  }
-}
-
-@supports not (margin-left: clamp( 0.0000000625rem , -6.2497286332rem  +  13.0206071943vw , 9.375rem )) {
-  .soon__text {
-    margin-left: calc(0.0000000625rem + 9.3749999375*(100vw - 47.99875rem)/72.00125);
-  }
 }
 
 .soon__label {
@@ -1447,6 +1431,7 @@
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  white-space: nowrap;
 }
 
 .about {
@@ -5104,12 +5089,6 @@ h6 {
   padding: 0 0.9375rem;
 }
 
-@media (min-width: 112.5rem) {
-  .soon__content {
-    min-height: 34.0625rem;
-  }
-}
-
 @media (min-width: 64em) {
   .benefits__item:not(:last-child)::after {
     content: "";
@@ -5805,6 +5784,10 @@ h6 {
             flex-direction: column;
   }
 
+  .soon {
+    padding-bottom: 3.75rem;
+  }
+
   .soon__content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -5813,7 +5796,7 @@ h6 {
   }
 
   .soon__text {
-    margin-left: inherit;
+    margin-left: 0;
   }
 
   .about__content {
@@ -6074,8 +6057,6 @@ h6 {
     text-decoration: underline;
   }
 }
-
-.webp .soon { background-image: url(../img/soon/soon-bg.webp); }
 
 .webp .soon_about { background-image: url(../img/soon/soon-bg-about.webp); }
 
