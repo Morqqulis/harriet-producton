@@ -955,7 +955,7 @@
                     recalculateAllMacy();
                 });
             });
-            handleTimer("2025-10-01");
+            handleTimer("2025-11-01");
         });
         window["FLS"] = true;
         isWebp();

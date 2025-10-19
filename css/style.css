@@ -1371,15 +1371,15 @@
           justify-content: center;
 }
 
-@supports (gap: clamp( 0.875rem , -0.0980538922rem  +  4.8652694611vw , 4.9375rem )) {
+@supports (gap: clamp( 1.5rem , 0.6766467066rem  +  4.1167664671vw , 4.9375rem )) {
   .soon__content {
-    gap: clamp( 0.875rem , -0.0980538922rem  +  4.8652694611vw , 4.9375rem );
+    gap: clamp( 1.5rem , 0.6766467066rem  +  4.1167664671vw , 4.9375rem );
   }
 }
 
-@supports not (gap: clamp( 0.875rem , -0.0980538922rem  +  4.8652694611vw , 4.9375rem )) {
+@supports not (gap: clamp( 1.5rem , 0.6766467066rem  +  4.1167664671vw , 4.9375rem )) {
   .soon__content {
-    gap: calc(0.875rem + 4.0625*(100vw - 20rem)/83.5);
+    gap: calc(1.5rem + 3.4375*(100vw - 20rem)/83.5);
   }
 }
 
@@ -1444,6 +1444,15 @@
   height: -moz-fit-content;
   height: fit-content;
   white-space: nowrap;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+
+.soon__btn svg {
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
 }
 
 .about {
@@ -4953,18 +4962,18 @@
   letter-spacing: -0.02em;
 }
 
-.course-aside__link {
+.course-aside__link.btn {
   text-align: center;
 }
 
 @supports (padding-block: clamp( 0.75rem , 0.6901197605rem  +  0.2994011976vw , 1rem )) {
-  .course-aside__link {
+  .course-aside__link.btn {
     padding-block: clamp( 0.75rem , 0.6901197605rem  +  0.2994011976vw , 1rem );
   }
 }
 
 @supports not (padding-block: clamp( 0.75rem , 0.6901197605rem  +  0.2994011976vw , 1rem )) {
-  .course-aside__link {
+  .course-aside__link.btn {
     padding-block: calc(0.75rem + 0.25*(100vw - 20rem)/83.5);
   }
 }
@@ -5725,7 +5734,7 @@ h6 {
     padding-right: 0;
   }
 
-  .course-aside__link {
+  .course-aside__link.btn {
     max-width: 21.25rem;
     margin-inline: auto;
     width: 100%;
@@ -6083,6 +6092,12 @@ h6 {
 
   .contact .contact__info a:hover {
     text-decoration: underline;
+  }
+
+  .course-aside__link.btn:hover {
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
   }
 }
 
